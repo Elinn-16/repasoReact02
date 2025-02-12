@@ -5,8 +5,9 @@ const Contador = () => {
 
     const [nombre, setNombre] = useState("");
 
+    //funcion para menejar el cambio de nombre 
     const manejarNombre = (e) => {
-        console.log(e.target.value); 
+        setNombre(e.target.value); // valor del input
     };
 
     const mas = () => {
@@ -22,8 +23,8 @@ const Contador = () => {
     return (
         <div>
             <div>
+                <p>Ingresa tu nombre</p>
                 <input type="text" label="Nombre" onChange={manejarNombre} />
-                <button  >Guardar</button>
             </div>
             <div>
                 <h1>Hola {nombre}, este es tu contador </h1>
