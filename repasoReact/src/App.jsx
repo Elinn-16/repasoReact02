@@ -1,13 +1,13 @@
+import React from 'react'
 import './App.css'
-import Saludo from '.components/Saludo'
+import Contador from './components/Contador'
 
 function App() {
 
 
   return (
     <>
-      <h1>Repaso React</h1>
-      <Saludo nombre="Juan" />
+      <Contador/>
     </>
   )
 }
