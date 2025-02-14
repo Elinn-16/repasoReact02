@@ -1,9 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import '../App.css';
 
 const Contador = () => {
     const [contador, setContador] = useState(0);
 
     const [nombre, setNombre] = useState("");
+
+
+    useEffect(() => {
+        document.title = `Contador: ${contador}`;
+      }, [contador]); 
+      
 
     //funcion para menejar el cambio de nombre 
     const manejarNombre = (e) => {
@@ -21,7 +28,8 @@ const Contador = () => {
 
 
     return (
-        <div>
+        <div className="container">
+            <h1>CONTADOR</h1>
             <div>
                 <p>Ingresa tu nombre</p>
                 <input type="text" label="Nombre" onChange={manejarNombre} />
@@ -36,5 +44,6 @@ const Contador = () => {
         </div>
     );
 };
+
 
 export default Contador;
