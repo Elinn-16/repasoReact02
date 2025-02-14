@@ -1,28 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import '../App.css';
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-function user() {
+
+const User = () => {
     const [users, setUsers] = useState([]);
-    
-    useEffect (() => {
-        axios.get('https://jsonplaceholder.typicode.com/todos/')
-        .then(response => {
-            setUsers(response.data);})
-        .catch(error => {
-            console.log('Error fetching data:', error);
-    })
 
 
-    return(
+    useEffect(() =>{
+        axios.get("https://jsonplaceholder.typicode.com/todos/")
+        .then(response => setUsers(response.data))
+        .catch(error => console.error("Error:", error));
+    }, []);
+
+
+
+    return (
         <div>
             {users.map((user) => (
                 <div key={user.id}>
+                    <h3>{user.id}</h3>
                     <p>{user.title}</p>
                 </div>
             ))}
         </div>
-    );
-    
-    })
-}
+    );  }
+
+
+
+export default User;
