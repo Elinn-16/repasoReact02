@@ -1,0 +1,7 @@
+{
+    "tareas": [
+      { "id": 1, "titulo": "Estudiar React", "completado": false },
+      { "id": 2, "titulo": "Practicar CRUD", "completado": true }
+    ]
+  }
+  

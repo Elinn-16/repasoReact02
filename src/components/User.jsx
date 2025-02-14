@@ -9,7 +9,7 @@ const User = () => {
     useEffect(() =>{
         axios.get("https://jsonplaceholder.typicode.com/todos/")
         .then(response => setUsers(response.data))
-        .catch(error => console.error("Error:", error));
+        .catch(error => console.log("Error:", error));
     }, []);
 
 
