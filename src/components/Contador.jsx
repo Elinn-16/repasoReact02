@@ -33,6 +33,7 @@ const Contador = () => {
             <div>
                 <p>Ingresa tu nombre</p>
                 <input type="text" label="Nombre" onChange={manejarNombre} />
+                <button></button>
             </div>
             <div>
                 <h1>Hola {nombre}, este es tu contador </h1>
